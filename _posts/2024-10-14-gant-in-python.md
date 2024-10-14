@@ -14,7 +14,7 @@ I was searching for a way to make a Gantt chart without using planning software.
 
 Another reason is that I tried several "specialized" solutions for creating Gantt charts aimed at delivering presentation-type outputs i.e. slick, uncluttered charts ready to be used in PowerPoint or Word. However, these cost money, are clunky to use, and provide rigid, inconsistent outputs. Whoever came up with the idea to make a Gantt charting solution in PowerPoint is a true champion of awkward decisions.
 
-I told myself: If only there was a tool that's free, highly customizable, and—with some knowledge—could be utilized for visualization, data wrangling, and a thousand other tasks... 
+If only there was a tool that's free, highly customizable, and—with some knowledge—could be utilized for visualization, data wrangling, and a thousand other tasks... 
 
 *[Python enters the scene.]*
 
@@ -29,9 +29,9 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 from pandas import Timestamp
 ```
-Then, we define the data we want to visualize. Here, we have a dictionary with the task name, department, start date, end date, and completion percentage. Data is stored in dictionary format, for the presentation purpouses, but otherwise it can be CSV, Excel, or any other format.
+Next, we define the data we want to visualize. We have a dictionary containing the task name, department, start date, end date, and completion percentage. The data is stored in a dictionary format for presentation purposes, but it could also be in CSV, Excel, or any other format.
 ```python
-#Data
+#Project Data
 data = {
     'Task': {
         0: 'Site \n Preparation',
@@ -104,7 +104,7 @@ data = {
     }
 }
 ```
-Then, we prep data for matplotlib. We calculate the number of days from the project start to the task start, the number of days from the project start to the end of tasks, the days between the start and end of each task, and the days between the start and the current progression of each task. We also create a column with the color for each department. 
+Then, we prepare the data for Matplotlib. We calculate the number of days from the project start to the task start, the number of days from the project start to the task end, the days between the start and end of each task, and the days from the start to the current progression of each task. Additionally, we create a column with the corresponding color for each department.
 ```python
 ##### DATA PREP ##### 
 df = pd.DataFrame(data)
@@ -138,7 +138,7 @@ df['color'] = df.apply(color, axis=1)
 # Reverse the DataFrame to reverse task order
 df = df.iloc[::-1].reset_index(drop=True)
 ```
-Then we plot the data. We create a horizontal bar chart with the task name, the number of days from the project start to the current progression of each task, the days between the start and end of each task, and the color for each department. We also place the task labels inside the task bars, display the completion percentage outside the bar and set the ticks.
+Next, we plot the data by creating a horizontal bar chart that includes the task name, the number of days from the project start to the current progression of each task, the days between the start and end of each task, and the color for each department. We also place the task labels inside the task bars, display the completion percentage outside the bars, and set the ticks accordingly.
 ```python
 ##### PLOT #####
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -221,7 +221,7 @@ plt.suptitle('Summary Schedule - Building A',
 fontsize=12, fontweight='bold', color='black', ha='center', va='top')
 plt.subplots_adjust(top=0.85)  # Adjust the top margin to add space under the title
 ```
-Finally, we add legends, hide bottom ticks and labels, draw a vertical line at the status date, and add a label to status date.
+Finally, we add legends, hide the bottom ticks and labels, draw a vertical line at the status date, and add a label for the status date.
 ```python
 ##### LEGENDS #####
 legend_elements = [Patch(facecolor='#E64646', label='Contractor A'),
@@ -254,5 +254,4 @@ Voila.
         {% include figure.liquid loading="eager" path="assets/img/gant_chart.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-Gantt chart in Python using Matplotlib. You can customize the chart further by changing the colors, adding more data, or changing the labels. The possibilities are endless.
-
+Gantt chart in Python using Matplotlib. You can further customize the chart by changing the colors, adding more data, or modifying the labels. The possibilities are endless.
