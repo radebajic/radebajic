@@ -1,11 +1,12 @@
 ---
 layout: post
-title: gant chart in python
+title: Gant Chart in Python
 date: 20241014 18:01:00
 description: making customizable gant chart in python using matplotlib
 tags: schedule code python
 categories: visualization
 featured: true
+thumbnail: assets/img/gant_chart.png
 ---
 
 Visualizations are a crucial part of delivering the story of data. The time needed to produce one, and to do it in a consistent, structured manner throughout the whole claim/delay report, is often underestimated. Nothing leaves a worse impression than a chart that's squinty, poorly designed, and full of riddles.
@@ -254,4 +255,4 @@ Voila.
         {% include figure.liquid loading="eager" path="assets/img/gant_chart.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-Gantt chart in Python using Matplotlib. You can further customize the chart by changing the colors, adding more data, or modifying the labels. The possibilities are endless.
+Gantt chart in Python using Matplotlib. Full code on [GitHub](https://github.com/radebajic/visualizations/blob/main/gantchart.py). You can further customize the chart by changing the colors, adding more data, or modifying the labels. The possibilities are endless.
