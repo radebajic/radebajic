@@ -82,9 +82,9 @@
       "url": "https://www.gatech.edu/",
       "area": "Data Analytics",
       "studyType": "Master’s Degree",
-      "startDate": "2023-01-01",
-      "endDate": "2025-01-01",
-      "courses": ["Advanced Data Analytics", "Machine Learning", "Predictive Modeling"]
+      "startDate": "2023",
+      "endDate": "2025",
+      "courses": ["Computational Data Analytics", "Machine Learning", "Predictive Modeling"]
     },
     {
       "institution": "University of Belgrade",
@@ -156,6 +156,7 @@
     },
     {
       "name": "Nabeel Kokhar",
+      "icon": "fa-solid fa-laptop",
       "reference": "Nabeel Kokhar is a construction expert and colleague at CML Construction Services GmbH, specializing in delay and quantum analysis: Rade is a highly skilled expert witness with a deep understanding of delay and quantum matters"
     }
   ],
