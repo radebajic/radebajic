@@ -4,7 +4,7 @@ permalink: /repositories/
 title: repositories
 description: Selection of repos I am contributing to or I keep near & dear.
 #Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
-nav: true
+nav: false
 nav_order: 4
 ---
 
