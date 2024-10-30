@@ -164,15 +164,5 @@
       "icon": "fa-solid fa-laptop",
       "reference": "Nabeel Kokhar is a construction expert and colleague at CML Construction Services GmbH, specializing in delay and quantum analysis: Rade is a highly skilled expert witness with a deep understanding of delay and quantum matters."
     }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing leverages quantum-mechanical phenomena, such as superposition and entanglement, to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
-    }
   ]
 }
